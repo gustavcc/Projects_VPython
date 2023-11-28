@@ -1,4 +1,4 @@
-﻿from visual import *
+from visual import *
 from visual.graph import *
 
 #------------------------------------------------------------------
@@ -26,7 +26,7 @@ grafico2 = gdisplay(width=800, height=400,
 
 grafico3 = gdisplay(width=800, height=400, 
           title='Y vs. t | V vs. t', xtitle='t(s)', ytitle='Y(m) | V(m/s)', 
-          xmax=20, xmin=0, ymax=5, ymin=-5, 
+          xmax=20, xmin=0, ymax=2.6, ymin=-2.6, 
           foreground=color.black, background=color.white) #TEMPO
 
 #------------------------------------------------------------------
@@ -46,7 +46,7 @@ funcao2_velocidade = gdots(gdisplay=grafico3, color=color.green) #velocidade em 
 #------------------------------------------------------------------
 #FUGURAS
 
-bola = sphere(pos=(0,0,0), radius=2, materials = materials.earth)
+bola = sphere(pos=(0,0,0), radius=2, material = materials.earth, color = color.cyan)
 
 teto = box(pos=(0,10,0), size=(20,0.5,10), color=color.cyan)
 
