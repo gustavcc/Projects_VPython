@@ -8,11 +8,11 @@ from visual.graph import * # biblioteca de visualizacao dos greficos
 #---------------------------------------------#
 # CENA - TAMNHO E POSICAO DA JANELA
 #---------------------------------------------#
-scene.background=color.white
-scene.width=800
-scene.height=400
-scene.range=(20,20,20)
-scene.center=(0,0,0)
+scene.background=color.white # cor de fundo
+scene.width=800 # largura
+scene.height=400 # altura
+scene.range=(15,15,15) # zoom em relacao a janela
+scene.center=(0,0,0) # posicao em relacao a janela
 
 #---------------------------------------------#
 # GRAFICO - INFORMACOES PARA A TELA DO GRAFICO
@@ -28,7 +28,7 @@ grafico2 = gdisplay(width=800, height=400,
     foreground=color.black, background=color.white) # ENERGIAS EM FUNCAO DO TEMPO
 
 grafico3 = gdisplay(width=800, height=400, 
-    title='X vs. t | V vs. t | a vs. t' , xtitle='t(s)', ytitle='X(m) | V(m/s) | a(m/s²)', 
+    title='X vs. t | V vs. t | a vs. t', xtitle='tempo(s)', ytitle='X(m) | V(m/s) | a vs. t', 
     xmax=20, xmin=0, ymax=5, ymin=-5, 
     foreground=color.black, background=color.white) # MEDIDAS EM FUNCAO DO TEMPO
 
@@ -52,11 +52,11 @@ funcao_aceleracao = gdots(gdisplay=grafico3, color=color.black) # aceleracao em 
 #---------------------------------------------#
 bloco = box(pos=(0,0,0), size=(2,2,2), color=color.blue)
                     
-piso = box(pos=(0,-1.25,0), size=(20,0.5,10), color=color.cyan)
+piso = box(pos=(0,-1.25,0), size=(20,0.5,10), color=color.white)
                     
-parede_esquerda = box(pos=(-9.75,2,0), size=(0.5,6,10), color=color.cyan)
+parede_esquerda = box(pos=(-9.75,2,0), size=(0.5,6,10), color=color.white)
                     
-parede_direita = box(pos=(9.75,2,0), size=(0.5,6,10), color=color.cyan)
+parede_direita = box(pos=(9.75,2,0), size=(0.5,6,10), color=color.white)
                     
 mola_esquerda = helix(pos=(-9.75,0,0), axis=(9.75,0,0), radius=0.5,
     thickness=0.1, coils=10, color=color.orange)
@@ -107,7 +107,7 @@ while True:
     #---------------------------------------------#
     # EXECUTANDO AS FUNCOES
     #---------------------------------------------#
-    if t <= 20:
+    if t <= 20.01:
         funcao_cinetica_x.plot(pos=(x,Ec)) # plotando (imagem) a energia cinetica em funcao de x
         funcao_potencial_x.plot(pos=(x,Ep)) # plotando (imagem) a energia potencial em funcao de x
         funcao_mecanica_x.plot(pos=(x,E)) # plotando (imagem) a energia meconica em funcao de x
