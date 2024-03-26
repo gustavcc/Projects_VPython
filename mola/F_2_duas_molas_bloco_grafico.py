@@ -15,7 +15,7 @@ scene.range=(15,15,15) # zoom em relacao a janela
 scene.center=(0,0,0) # posicao em relacao a janela
 
 #---------------------------------------------#
-# GRAFICO - INFORMACOES PARA A TELA DO GRAFICO
+# GRAFICO - INFORMACOES PARA A TELA DO GRAFICO (JANELAS)
 #---------------------------------------------#
 grafico1 = gdisplay(width=800, height=400, 
     title='Ec vs. x | Ep vs. x | E vs. x', xtitle='x(m)', ytitle='Energia(J)', 
