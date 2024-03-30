@@ -80,6 +80,7 @@ t = 0 # tempo para usar nos graficos
 dt = 0.009 # variacao do tempo (formulas)
 
 caixa_texto = label(pos=(3,5,0), text='x = %1.1f' % x) # cria a distancia em forma de texto
+caixa_velocidade = label(pos=(0,5,0), text='v = %1.1f' % v) # cria a distancia em forma de texto
 caixa_texto2 = label(pos=(-3,5,0), text='t = %1.1f' % t) # cria o tempo em forma de texto
 
 #---------------------------------------------#
@@ -95,6 +96,7 @@ while True:
     x += x0 + v*dt
 
     caixa_texto.text='x = %1.2f' % x # mostra a distancia em forma de texto
+    caixa_velocidade='v = %1.2f' % v #velocidade
 
     bloco.pos.x = x
     mola_esquerda.axis = bloco.pos - parede_esquerda.pos + (0,2,0)
