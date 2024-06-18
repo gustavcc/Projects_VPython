@@ -1,4 +1,6 @@
-﻿from visual import* #pacote para visualiza��o da anima��o
+﻿# -*- coding: utf-8 -*-
+
+from visual import* #pacote para visualiza��o da anima��o
 from visual.graph import * # pacote de visualiza��o dos gr�ficos
 
 #------------------------------------------------------------------
